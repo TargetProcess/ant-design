@@ -130,7 +130,7 @@
     left: -1px;
     bottom: -1px;
     right: -1px;
-    border-radius: inherit;
+    border-radius: @border-radius-base * 1.5;
     border: 0 solid @primary-color;
     opacity: 0.4;
     animation: buttonEffect .4s;
@@ -159,10 +159,10 @@
 @keyframes buttonEffect {
   to {
     opacity: 0;
-    top: -6px;
-    left: -6px;
-    bottom: -6px;
-    right: -6px;
-    border-width: 6px;
+    top: -@btn-animation-outline-width;
+    left: -@btn-animation-outline-width;
+    bottom: -@btn-animation-outline-width;
+    right: -@btn-animation-outline-width;
+    border-width: @btn-animation-outline-width;
   }
 }

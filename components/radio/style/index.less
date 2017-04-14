@@ -27,7 +27,7 @@
   display: inline-block;
   position: relative;
   line-height: 1;
-  vertical-align: text-bottom;
+  vertical-align: middle;
   cursor: pointer;
   .@{radio-prefix-cls}-wrapper:hover &,
   &:hover,
@@ -39,16 +39,16 @@
   &-inner {
     &:after {
       position: absolute;
-      width: 6px;
-      height: 6px;
-      left: 3px;
-      top: 3px;
-      border-radius: @border-radius-base;
+      width: @radio-size / 2 - 2;
+      height: @radio-size / 2 - 2;
+      left: @radio-size / 4;
+      top: @radio-size / 4;
+      border-radius: @radio-size;
       display: table;
       border-top: 0;
       border-left: 0;
       content: ' ';
-      background-color: @primary-color;
+      background-color: @component-background;
       opacity: 0;
       transform: scale(0);
       transition: all @radio-duration @ease-in-out-circ;
@@ -58,11 +58,11 @@
     top: 0;
     left: 0;
     display: block;
-    width: 14px;
-    height: 14px;
+    width: @radio-size;
+    height: @radio-size;
     border-width: 1px;
     border-style: solid;
-    border-radius: 14px;
+    border-radius: @radio-size;
     border-color: @border-color-base;
     background-color: @radio-button-bg;
     transition: all @radio-duration;
@@ -84,6 +84,7 @@
 .@{radio-prefix-cls}-checked {
   .@{radio-inner-prefix-cls} {
     border-color: @primary-color;
+    background: @primary-color;
     &:after {
       transform: scale(1);
       opacity: 1;
@@ -185,9 +186,9 @@ span.@{radio-prefix-cls} + * {
   }
 
   &-checked {
-    background: @radio-button-bg;
+    background: @primary-color;
     border-color: @primary-color;
-    color: @primary-color;
+    color: @component-background;
     box-shadow: -1px 0 0 0 @primary-color;
 
     &:first-child {
@@ -195,16 +196,11 @@ span.@{radio-prefix-cls} + * {
       box-shadow: none!important;
     }
 
-    &:hover {
-      border-color: @primary-5;
-      box-shadow: -1px 0 0 0 @primary-5;
-      color: @primary-5;
-    }
-
+    &:hover,
     &:active {
-      border-color: @primary-7;
-      box-shadow: -1px 0 0 0 @primary-7;
-      color: @primary-7;
+      border-color: @primary-color;
+      box-shadow: -1px 0 0 0 @primary-color;
+      color: @component-background;
     }
   }
 

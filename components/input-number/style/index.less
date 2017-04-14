@@ -17,7 +17,7 @@
   font-size: @font-size-base;
   height: @input-height-base;
   display: inline-block;
-  border: @border-width-base @border-style-base @border-color-base;
+  border: @border-width-base @border-style-base @input-border-color;
   border-radius: @border-radius-base;
   width: 80px;
 
@@ -103,7 +103,7 @@
   }
 
   &-handler-wrap {
-    border-left: @border-width-base @border-style-base @border-color-base;
+    border-left: @border-width-base @border-style-base @input-border-color;
     width: 22px;
     height: 100%;
     background: @component-background;
@@ -139,7 +139,7 @@
   }
 
   &-handler-down {
-    border-top: @border-width-base @border-style-base @border-color-base;
+    border-top: @border-width-base @border-style-base @input-border-color;
     top: -1px;
     cursor: pointer;
     &-inner {

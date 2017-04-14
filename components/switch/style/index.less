@@ -8,41 +8,45 @@
   position: relative;
   display: inline-block;
   box-sizing: border-box;
-  height: 22px;
-  min-width: 44px;
+  height: @switcher-size;
+  min-width: @switcher-size * 2;
   line-height: 20px;
   vertical-align: middle;
-  border-radius: 20px;
-  border: 1px solid #ccc;
-  background-color: @disabled-color;
+  border-radius: @switcher-size;
+  border: @border-width-base solid @input-border-color;
+  background-color: @component-background;
   cursor: pointer;
   transition: all @switch-duration;
   user-select: none;
 
   &-inner {
-    color: #fff;
+    color: @text-color;
     font-size: @font-size-base;
-    margin-left: 24px;
-    margin-right: 6px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    min-width: 25px;
+    margin-left: @switcher-size + 6;
+    margin-right: @switcher-size - 10;
     display: block;
+    text-align: center;
   }
 
   &:after {
     position: absolute;
-    width: 18px;
-    height: 18px;
-    left: 1px;
-    top: 1px;
+    width: @switcher-size - 8;
+    height: @switcher-size - 8;
+    left: 3px;
+    top: 3px;
 
-    border-radius: 18px;
-    background-color: @component-background;
+    border-radius: @switcher-size;
+    background-color: @text-color;
     content: " ";
     cursor: pointer;
     transition: all @switch-duration, width @switch-duration;
   }
 
   &:active:after {
-    width: 24px;
+    width: @switcher-size - 4;
   }
 
   &:focus {
@@ -97,13 +101,15 @@
     background-color: @primary-color;
 
     .@{switch-prefix-cls}-inner {
-      margin-left: 6px;
-      margin-right: 24px;
+      margin-left: @switcher-size - 10;
+      margin-right: @switcher-size + 6;
+      color: @component-background;
     }
 
     &:after {
       left: 100%;
       margin-left: -19px;
+      background-color: @component-background;
     }
 
     &:active:after {

@@ -1,6 +1,6 @@
 ---
 order: 1
-title: 
+title:
     zh-CN: 三种大小
     en-US: Three sizes of Input
 ---
@@ -13,18 +13,18 @@ title:
 
 ## en-US
 
-There are three sizes of an Input box: `large` (32px)、`default` (28px) and `small` (22px). 
+There are three sizes of an Input box: `large` (36px)、`default` (28px) and `small` (24px).
 
 Note: Inside of forms, only the large size is used.
 
 ````jsx
-import { Input } from 'antd';
+import { Input, Button } from 'antd';
 
 ReactDOM.render(
   <div className="example-input">
-    <Input size="large" placeholder="large size" />
-    <Input placeholder="default size" />
-    <Input size="small" placeholder="small size" />
+    <Input size="large" placeholder="large size" /><Button size="large">Do this</Button>
+    <Input placeholder="default size" /><Button>Do this</Button>
+    <Input size="small" placeholder="small size" /><Button size="small">Do this</Button>
   </div>
 , mountNode);
 ````

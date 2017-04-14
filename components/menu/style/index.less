@@ -19,6 +19,10 @@
     display: none;
   }
 
+  &-item-group {
+    padding-bottom: 10px;
+  }
+
   &-item-group-list {
     margin: 0;
     padding: 0;
@@ -29,6 +33,7 @@
     font-size: @font-size-base;
     line-height: 1.5;
     padding: 8px 16px;
+    border-bottom: @border-width-base solid fade(@component-background, 10%);
   }
 
   &-item,
@@ -307,9 +312,9 @@
     .@{menu-prefix-cls}-item,
     .@{menu-prefix-cls}-submenu-title {
       padding: 0 16px;
-      font-size: @font-size-base;
-      line-height: 42px;
-      height: 42px;
+      font-size: @font-size-base + 2px;
+      line-height: 40px;
+      height: 40px;
       overflow: hidden;
       text-overflow: ellipsis;
     }
@@ -343,8 +348,8 @@
     border-radius: 0;
     & > .@{menu-prefix-cls}-item,
     & > .@{menu-prefix-cls}-submenu > .@{menu-prefix-cls}-submenu-title {
-      line-height: 42px;
-      height: 42px;
+      line-height: 40px;
+      height: 40px;
       list-style-type: disc;
       list-style-position: inside;
     }

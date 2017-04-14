@@ -128,9 +128,9 @@
   }
 
   &-sm > .@{btnClassName} {
-    .button-size(@btn-height-sm; @btn-padding-sm; @font-size-base; @btn-border-radius-sm);
+    .button-size(@btn-height-sm; @btn-padding-sm; @font-size-sm; @btn-border-radius-sm);
     > .@{iconfont-css-prefix} {
-      font-size: @font-size-base;
+      font-size: @font-size-sm;
     }
   }
 }
@@ -185,7 +185,7 @@
   }
 
   &-sm {
-    .button-size(@btn-height-sm; @btn-padding-sm; @font-size-base; @btn-border-radius-sm);
+    .button-size(@btn-height-sm; @btn-padding-sm; @font-size-sm; @btn-border-radius-sm);
   }
 }
 
@@ -233,7 +233,7 @@
 
   &.@{btnClassName}-sm {
     .square(@btn-circle-size-sm);
-    .button-size(@btn-circle-size-sm; 0; @font-size-base; 50%);
+    .button-size(@btn-circle-size-sm; 0; @font-size-sm + 2; 50%);
   }
 }
 
